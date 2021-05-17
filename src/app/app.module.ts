@@ -8,13 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroComponent } from './hero/hero.component';
 import { AboutComponent } from './about/about.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { LangsComponent } from './langs/langs.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 
 @NgModule({
-  declarations: [AppComponent, HeroComponent, AboutComponent],
+  declarations: [AppComponent, HeroComponent, AboutComponent, ProjectsComponent, LangsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
