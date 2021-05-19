@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectModel } from '../models/project.model';
 import { ProjectsService } from '../services/projects.service';
 
 @Component({
@@ -7,18 +8,23 @@ import { ProjectsService } from '../services/projects.service';
 	styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit {
-	projectsList = [];
+	projectsList: ProjectModel[] = [];
 
 	constructor(private readonly projects: ProjectsService) {}
 
 	ngOnInit(): void {
 		this.projects.fetchAllProjects().subscribe(
 			(result) => {
-				console.log('ProjectsComponent', result);
+				console.log(result);
+				this.projectsList = result;
 			},
 			(error) => {
 				console.error(error);
 			},
 		);
+	}
+
+	getImageUrl(partialImageUrl: string): string {
+		return 'http://167.172.177.134:1337' + partialImageUrl;
 	}
 }
