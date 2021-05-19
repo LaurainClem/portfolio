@@ -1,4 +1,4 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -10,6 +10,7 @@ import { HeroComponent } from './hero/hero.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { LangsComponent } from './langs/langs.component';
+import { GraphqlInterceptor } from './graphql.interceptor';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -29,7 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       },
     }),
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: GraphqlInterceptor, multi: true}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
