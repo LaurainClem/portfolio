@@ -1,8 +1,19 @@
 export class ProjectModel {
-  title = '';
-  description = '';
-  mainImage = { url: '' };
-  images = [{ url: '' }];
-  frontRepo = '';
-  backRepo = '';
+	title = '';
+	description = '';
+	images = new Array<ProjectImageModel>();
+	frontRepo = '';
+	backRepo = '';
+	technologies = new Array<TechnologiesModel>();
+	status = '';
+	frontRepository = '';
+	backRepository = '';
+}
+
+export class ProjectImageModel {
+	url = '';
+}
+
+export class TechnologiesModel {
+	label = '';
 }

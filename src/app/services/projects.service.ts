@@ -11,8 +11,6 @@ export class ProjectsService {
 	constructor(private readonly http: HttpClient) {}
 
 	fetchAllProjects(): Observable<ProjectModel[]> {
-		return this.http.get<ProjectModel[]>(
-			`${environment.graphQLBaseUrl}{projects{title,images{url}}}`,
-		);
+		return this.http.get<ProjectModel[]>(`${environment.baseUrl}/projects`);
 	}
 }

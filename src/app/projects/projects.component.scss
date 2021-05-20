@@ -2,9 +2,14 @@
 	text-decoration: underline #ff9d0a;
 }
 
-.projectThumbnails {
-	height: 350px;
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: top;
+.statusProject {
+	position: absolute;
+	top: 1rem;
+	right: 3rem;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.repoLink:hover {
+	color: #ff9d0a;
 }

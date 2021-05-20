@@ -1,6 +1,9 @@
 {
-  "heroTitle": "Laurain Clément",
-  "heroDesc": "Développeur typescript Full Stack",
-  "aboutTitle": "A propos",
-  "projectsTitle": "Projets"
+	"heroTitle": "Laurain Clément",
+	"heroDesc": "Développeur typescript Full Stack",
+	"aboutTitle": "A propos",
+	"projectsTitle": "Projets",
+	"done": " ✅ Réalisé",
+	"inProgress": " ☕ En cours de réalisation",
+	"design": " 🎨 Maquettage"
 }

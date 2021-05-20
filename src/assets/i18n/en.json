@@ -1,6 +1,9 @@
 {
-  "heroTitle": "Hi, i'm Laurain Clément",
-  "heroDesc": "Full stack typescript developper",
-  "aboutTitle": "About",
-  "projectsTitle": "Projects"
+	"heroTitle": "Hi, i'm Laurain Clément",
+	"heroDesc": "Full stack typescript developper",
+	"aboutTitle": "About",
+	"projectsTitle": "Projects",
+	"done": " ✅ Realised",
+	"inProgress": " ☕ In progress",
+	"design": " 🎨 Maquettage"
 }
