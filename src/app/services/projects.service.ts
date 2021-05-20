@@ -8,9 +8,16 @@ import { ProjectModel } from '../models/project.model';
 	providedIn: 'root',
 })
 export class ProjectsService {
+	public projectsList = new Array<ProjectModel>();
+
 	constructor(private readonly http: HttpClient) {}
 
-	fetchAllProjects(): Observable<ProjectModel[]> {
-		return this.http.get<ProjectModel[]>(`${environment.baseUrl}/projects`);
+	fetchAllProjects(local: string = 'en'): void {
+		this.http
+			.get<ProjectModel[]>(`${environment.baseUrl}/projects?_locale=${local}`)
+			.subscribe((result) => {
+				this.projectsList = result;
+				console.log(this.projectsList);
+			});
 	}
 }

@@ -8,20 +8,10 @@ import { ProjectsService } from '../services/projects.service';
 	styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit {
-	projectsList: ProjectModel[] = [];
-
-	constructor(private readonly projects: ProjectsService) {}
+	constructor(public readonly projects: ProjectsService) {}
 
 	ngOnInit(): void {
-		this.projects.fetchAllProjects().subscribe(
-			(result) => {
-				console.log(result);
-				this.projectsList = result;
-			},
-			(error) => {
-				console.error(error);
-			},
-		);
+		this.projects.fetchAllProjects();
 	}
 
 	getImageUrl(partialImageUrl: string): string {
