@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectModel } from '../models/project.model';
 import { ProjectsService } from '../services/projects.service';
+import { TechnologiesService } from '../services/technologies.service';
 
 @Component({
 	selector: 'app-projects',
@@ -8,10 +9,15 @@ import { ProjectsService } from '../services/projects.service';
 	styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit {
-	constructor(public readonly projects: ProjectsService) {}
+	constructor(
+		public readonly projects: ProjectsService,
+		public technologies: TechnologiesService,
+	) {}
 
 	ngOnInit(): void {
 		this.projects.fetchAllProjects();
+		this.technologies.fetchAllTechnologies();
+		this.technologies.technologySelected = undefined;
 	}
 
 	getImageUrl(partialImageUrl: string): string {

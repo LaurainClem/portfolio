@@ -1,5 +1,27 @@
 <div class="w-full">
-	<h2 class="text-4xl font-bold text-center sectionTitle mb-12">#Projects</h2>
+	<h2 class="text-4xl font-bold text-center sectionTitle mb-12">
+		#{{ 'projectsTitle' | translate }}
+	</h2>
+	<div class="flex justify-center mb-12">
+		<div class="switchTechnologiesContainer">
+			<span
+				class="inline-block mx-2 cursor-pointer allTag tagTechno text-base uppercase"
+				(click)="technologies.technologySelected = undefined"
+				[ngClass]="technologies.technologySelected === undefined ? 'active' : ''"
+			>
+				{{ 'all' | translate }}
+			</span>
+			<img
+				[ngClass]="technologies.technologySelected === technology ? 'active' : ''"
+				*ngFor="let technology of technologies.technologiesList"
+				class="inline-block mx-2 cursor-pointer tagTechno"
+				height="40px"
+				width="40px"
+				[src]="'../../assets/img/' + technology.label.toLowerCase() + '.png'"
+				(click)="technologies.technologySelected = technology"
+			/>
+		</div>
+	</div>
 	<div class="mb-12 w-full">
 		<div
 			*ngFor="let project of projects.projectsList"
@@ -44,7 +66,7 @@
 				</div>
 			</div>
 			<p class="text-center textProject mt-6">
-				<span class="block font-bold text-xl">Code</span>
+				<span class="block font-bold text-xl">Git</span>
 				<a class="mx-2 repoLink" [href]="project.frontRepository" target="_blank">Frontend</a> /
 				<a class="mx-2 repoLink" [href]="project.backRepository" target="_blank">Backend</a>
 			</p>
