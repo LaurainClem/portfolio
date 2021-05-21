@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { ProjectModel } from '../models/project.model';
 import { ProjectsService } from '../services/projects.service';
 import { TechnologiesService } from '../services/technologies.service';
@@ -9,15 +10,17 @@ import { TechnologiesService } from '../services/technologies.service';
 	styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit {
+	public projectsList = new Array<ProjectModel>();
+
 	constructor(
 		public readonly projects: ProjectsService,
-		public technologies: TechnologiesService,
+		public readonly technologies: TechnologiesService,
+		private readonly translate: TranslateService,
 	) {}
 
 	ngOnInit(): void {
-		this.projects.fetchAllProjects();
+		this.projects.fetchAllProjects(this.translate.getBrowserLang() === 'fr' ? 'fr' : undefined);
 		this.technologies.fetchAllTechnologies();
-		this.technologies.technologySelected = undefined;
 	}
 
 	getImageUrl(partialImageUrl: string): string {

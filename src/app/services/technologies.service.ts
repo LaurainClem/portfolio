@@ -11,11 +11,11 @@ export class TechnologiesService {
 	public technologiesList = new Array<TechnologiesModel>();
 	public technologySelected?: TechnologiesModel;
 
-	constructor(private readonly http: HttpClient, private readonly projects: ProjectsService) {}
+	constructor(private readonly http: HttpClient) {}
 
 	fetchAllTechnologies(): void {
 		this.http
-			.get<Array<TechnologiesModel>>(`${environment.graphQLBaseUrl}{technologies{label}}`)
+			.get<Array<TechnologiesModel>>(`${environment.baseUrl}/technologies`)
 			.subscribe((result) => {
 				this.technologiesList = result;
 			});
