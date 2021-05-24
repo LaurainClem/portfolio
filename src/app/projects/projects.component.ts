@@ -39,4 +39,8 @@ export class ProjectsComponent implements OnInit {
 		}
 		return '';
 	}
+
+	getCarouselHeight(): number {
+		return window.innerWidth <= 1280 ? 200 : 400;
+	}
 }
