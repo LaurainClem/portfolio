@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { environment } from 'src/environments/environment';
 import { ProjectModel } from '../models/project.model';
 import { ProjectsService } from '../services/projects.service';
 import { TechnologiesService } from '../services/technologies.service';
@@ -11,6 +12,7 @@ import { TechnologiesService } from '../services/technologies.service';
 })
 export class ProjectsComponent implements OnInit {
 	public projectsList = new Array<ProjectModel>();
+	public environnement = environment;
 
 	constructor(
 		public readonly projects: ProjectsService,

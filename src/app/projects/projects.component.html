@@ -69,7 +69,7 @@
 							[objectFit]="'contain'"
 						>
 							<div class="carousel-cell" *ngFor="let image of project.images">
-								<img alt="slide" [src]="'http://167.172.177.134:1337' + image.url" alt="" />
+								<img alt="slide" [src]="environnement.baseUrl + image.url" alt="" />
 							</div>
 						</carousel>
 					</div>
