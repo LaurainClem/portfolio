@@ -13,6 +13,7 @@ import { LangsComponent } from './langs/langs.component';
 import { GraphqlInterceptor } from './graphql.interceptor';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown';
+import { LiveComponent } from './live/live.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http);
@@ -48,7 +49,7 @@ export function markedOptionsFactory(): MarkedOptions {
 }
 
 @NgModule({
-	declarations: [AppComponent, HeroComponent, AboutComponent, ProjectsComponent, LangsComponent],
+	declarations: [AppComponent, HeroComponent, AboutComponent, ProjectsComponent, LangsComponent, LiveComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,

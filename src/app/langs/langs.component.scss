@@ -1,22 +1,22 @@
 .frenchFlag {
-  background-image: url("../../assets/img/franceFlag.svg");
+	background-image: url('../../assets/img/franceFlag.svg');
 }
 
 .ukFlag {
-  background-image: url("../../assets/img/ukFlag.svg");
+	background-image: url('../../assets/img/ukFlag.svg');
 }
 
 .frenchFlag,
 .ukFlag {
-  height: 30px;
-  width: 30px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+	height: 2rem;
+	width: 2rem;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
 }
 
 .frenchFlag:hover,
 .ukFlag:hover {
-  cursor: pointer;
-  transform: scale(1.1);
+	cursor: pointer;
+	transform: scale(1.1);
 }
