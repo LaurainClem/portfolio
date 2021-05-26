@@ -7,5 +7,6 @@
 	"inProgress": " ☕ En cours de réalisation",
 	"design": " 🎨 Maquettage",
 	"all": "Tout",
-	"liveTitle": "Suivez moi en direct"
+	"liveTitle": "Suivez moi en direct",
+	"noProjects": "Oops ! Aucun projet trouvé"
 }

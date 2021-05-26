@@ -13,12 +13,11 @@ export class LiveComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.player = new Twitch.Player('twitch-embed', {
-			collection: 'Dmzn3cCHgBacaQ',
+			channel: 'clemcode',
 			height: (window.innerWidth * (3 / 5)) / 2,
 			width: window.innerWidth * (3 / 5),
 			autoplay: true,
 			muted: true,
-			time: '0h7m50s',
 		});
 
 		window.addEventListener('resize', (event) => {

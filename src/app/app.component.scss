@@ -11,6 +11,18 @@
 	border-bottom: 3px solid #ff9d0a;
 }
 
-section {
-	margin-top: 4rem;
+@media (min-width: 1px) {
+	section {
+		margin-top: 4rem;
+	}
+}
+
+@media (min-width: 1280px) {
+	section {
+		margin-top: 10rem;
+	}
+}
+
+.heroSection {
+	margin-top: 2rem;
 }
