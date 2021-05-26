@@ -1,0 +1,15 @@
+<div class="flex justify-between w-full px-4 mt-6">
+	<div>logo</div>
+	<div>
+		<img
+			(click)="langs.changeCurrentLanguage(langsEnum.fr)"
+			class="flag-images"
+			src="../../assets/img/franceFlag.svg"
+		/>
+		<img
+			(click)="langs.changeCurrentLanguage(langsEnum.en)"
+			class="flag-images"
+			src="../../assets/img/ukFlag.svg"
+		/>
+	</div>
+</div>

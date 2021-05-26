@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { GraphqlInterceptor } from './graphql.interceptor';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown';
+import { TopbarComponent } from './topbar/topbar.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http);
@@ -44,7 +45,7 @@ export function markedOptionsFactory(): MarkedOptions {
 }
 
 @NgModule({
-	declarations: [AppComponent],
+	declarations: [AppComponent, TopbarComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
