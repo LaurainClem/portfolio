@@ -19,3 +19,93 @@ body {
 	background-color: $background;
 	min-height: 100vh;
 }
+
+img {
+	pointer-events: none;
+}
+
+app-home,
+app-technologies,
+app-cursus,
+app-projects,
+app-live,
+app-contact {
+	height: 100%;
+	width: 100%;
+}
+
+.message {
+	padding: 0.6rem 2rem;
+	background-color: $primary;
+	width: fit-content;
+
+	h2 {
+		color: $accent;
+		font-weight: 700;
+		font-size: 1.5rem;
+	}
+	p {
+		color: $background;
+	}
+}
+
+.fa-github {
+	color: #333;
+}
+
+.fa-linkedin {
+	color: #0077b5;
+}
+
+.fa-twitch {
+	color: #9146ff;
+}
+
+.fab {
+	font-size: 1.2rem;
+	margin: 0 5px;
+}
+
+.hello-anim {
+	animation: 1.2s ease hello-anim;
+}
+
+.point-anim {
+	animation: 1.2s ease point-anim;
+}
+
+@keyframes hello-anim {
+	0% {
+		transform: rotateZ(0deg);
+	}
+	25% {
+		transform: rotateZ(75deg) translateY(-10px);
+	}
+	50% {
+		transform: rotateZ(0deg) translateY(0px);
+	}
+	75% {
+		transform: rotateZ(75deg) translateY(-10px);
+	}
+	100% {
+		transform: rotateZ(0deg) translateY(0px);
+	}
+}
+
+@keyframes point-anim {
+	0% {
+		transform: translateY(0px);
+	}
+	25% {
+		transform: translateY(8px);
+	}
+	50% {
+		transform: translateY(0px);
+	}
+	75% {
+		transform: translateY(8px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}

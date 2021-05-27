@@ -7,7 +7,7 @@ import { LangsService } from './services/langs.service';
 	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-	public isMenuOpen = true;
+	public isMenuOpen = false;
 
 	constructor(private readonly langs: LangsService) {}
 

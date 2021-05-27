@@ -1,12 +1,13 @@
 @import '../../variables.scss';
 
 .flag-images {
-	height: 50px;
-	width: 50px;
+	height: 1.6rem;
+	width: 1.6rem;
 	border-radius: 5px;
 	display: inline-block;
 	margin: 0 0.5rem;
 	transition: transform 0.2s ease;
+	pointer-events: all;
 }
 
 .flag-images:hover {

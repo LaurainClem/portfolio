@@ -43,9 +43,14 @@ nav {
 	width: 300px;
 	position: absolute;
 	transition: left 0.5s ease;
+	z-index: 1;
 }
 
 .side-menu-control {
 	height: 10vh;
 	padding: 0 1rem;
+}
+
+.grayscale {
+	transition: filter 1s ease;
 }

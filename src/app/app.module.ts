@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
+import player from 'lottie-web';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GraphqlInterceptor } from './graphql.interceptor';
@@ -17,6 +17,7 @@ import { CursusComponent } from './cursus/cursus.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { LiveComponent } from './live/live.component';
 import { ContactComponent } from './contact/contact.component';
+import { LottieModule } from 'ngx-lottie';
 
 export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http);
@@ -51,6 +52,10 @@ export function markedOptionsFactory(): MarkedOptions {
 	};
 }
 
+export function playerFactory() {
+	return player;
+}
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -81,6 +86,7 @@ export function markedOptionsFactory(): MarkedOptions {
 				useFactory: markedOptionsFactory,
 			},
 		}),
+		LottieModule.forRoot({ player: playerFactory }),
 	],
 	providers: [{ provide: HTTP_INTERCEPTORS, useClass: GraphqlInterceptor, multi: true }],
 	bootstrap: [AppComponent],

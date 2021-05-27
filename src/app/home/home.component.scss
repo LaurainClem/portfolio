@@ -1,0 +1,26 @@
+@import '../../variables.scss';
+
+.img-home {
+	width: 100%;
+	max-width: 600px;
+}
+
+.message-top {
+	border-radius: 15px 15px 15px 5px;
+}
+
+.message-bottom {
+	border-radius: 5px 15px 15px 15px;
+}
+
+.grid-messages {
+	grid-template-columns: 1fr 80%;
+}
+
+.avatar-msg {
+	position: absolute;
+	height: 84px;
+	left: -90px;
+	top: 50%;
+	transform: translateY(-50%);
+}

@@ -1,1 +1,14 @@
-<p>home works!</p>
+<div class="xl:grid xl:grid-cols-2 sm:flex sm:flex-col sm:mx-auto sm:w-3/4 xl:w-full xl:h-full">
+	<div class="flex items-end justify-center">
+		<ng-lottie [options]="animationOptions"></ng-lottie>
+	</div>
+	<div class="flex flex-col items-center sm:mt-12 xl:mt-0">
+		<div>
+			<div
+				class="message message-top"
+				*ngFor="let message of messages"
+				[innerHtml]="message | translate"
+			></div>
+		</div>
+	</div>
+</div>

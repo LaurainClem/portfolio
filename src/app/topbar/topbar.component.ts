@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { LANGS } from 'src/enums/langs.enum';
+import { LANGS } from 'src/static/langs.enum';
 import { LangsService } from '../services/langs.service';
 
 @Component({
@@ -15,8 +15,7 @@ export class TopbarComponent {
 
 	constructor(public readonly langs: LangsService) {}
 
-	changeMenuStatus() {
+	changeMenuStatus(): void {
 		this.isMenuOpenChange.emit(!this.isMenuOpen);
-		console.log(this.isMenuOpen);
 	}
 }

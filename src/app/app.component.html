@@ -7,7 +7,7 @@
 	</div>
 </div>
 
-<div class="px-4">
+<div class="px-4" [ngClass]="isMenuOpen ? 'filter grayscale' : ''">
 	<header class="pt-6">
 		<app-topbar [(isMenuOpen)]="isMenuOpen"></app-topbar>
 	</header>
