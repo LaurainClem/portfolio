@@ -10,18 +10,12 @@
 /* You can add global styles to this file, and also import other style files */
 
 * {
-	font-family: 'Lato', sans-serif;
-	font-size: 20px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 24px;
 	color: $primary;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-	font-family: 'Poppins', sans-serif;
-}
 body {
-	background-color: #1d1d1d;
+	background-color: $background;
+	min-height: 100vh;
 }

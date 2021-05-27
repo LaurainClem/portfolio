@@ -1,5 +1,25 @@
-<nav></nav>
+<div class="side-menu" [ngClass]="isMenuOpen ? 'side-menu-opened' : 'side-menu-closed'">
+	<div class="flex justify-end items-center side-menu-control">
+		<i class="fas fa-times cursor-pointer" (click)="isMenuOpen = !isMenuOpen"></i>
+	</div>
+	<div class="flex justify-center w-full">
+		<app-menu [(isMenuOpen)]="isMenuOpen"></app-menu>
+	</div>
+</div>
 
-<header>
-	<app-topbar></app-topbar>
-</header>
+<div class="px-4">
+	<header class="pt-6">
+		<app-topbar [(isMenuOpen)]="isMenuOpen"></app-topbar>
+	</header>
+	<main>
+		<aside>
+			<nav class="flex items-center" s>
+				<app-menu></app-menu>
+			</nav>
+		</aside>
+		<div class="px-4 flex items-center justify-center h-full">
+			<router-outlet></router-outlet>
+		</div>
+	</main>
+	<footer></footer>
+</div>

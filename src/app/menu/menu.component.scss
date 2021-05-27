@@ -1,0 +1,30 @@
+@import '../../variables.scss';
+
+.active {
+	border: 5px solid $primary;
+	border-radius: 5px;
+	font-size: 1.5rem;
+	margin: 1rem 0;
+	color: $primary;
+}
+
+li {
+	width: fit-content;
+	padding: 0.2rem 0.5rem;
+	font-size: 1rem;
+	transition: font-size 1s ease, color 1s ease;
+	color: $secondary;
+}
+
+li:hover {
+	font-size: 1.5rem;
+	margin: 1rem 0;
+	color: $primary;
+}
+
+.side-menu-nav {
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

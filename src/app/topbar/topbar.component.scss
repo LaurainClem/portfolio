@@ -1,11 +1,33 @@
+@import '../../variables.scss';
+
 .flag-images {
 	height: 50px;
 	width: 50px;
 	border-radius: 5px;
 	display: inline-block;
 	margin: 0 0.5rem;
+	transition: transform 0.2s ease;
 }
 
 .flag-images:hover {
 	cursor: pointer;
+	transform: scale(1.2);
+}
+
+@media screen and (min-width: $large-screen) {
+	#logo {
+		display: block;
+	}
+	#hamburger-menu {
+		display: none;
+	}
+}
+
+@media screen and (max-width: $large-screen) {
+	#logo {
+		display: none;
+	}
+	#hamburger-menu {
+		display: block;
+	}
 }

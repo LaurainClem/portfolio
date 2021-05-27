@@ -7,6 +7,8 @@ import { LangsService } from './services/langs.service';
 	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+	public isMenuOpen = true;
+
 	constructor(private readonly langs: LangsService) {}
 
 	ngOnInit(): void {

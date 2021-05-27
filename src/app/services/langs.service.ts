@@ -9,7 +9,7 @@ export class LangsService {
 	constructor(private readonly translate: TranslateService) {}
 
 	changeCurrentLanguage(lang?: LANGS): void {
-		const currentLang = lang ? LANGS[lang] : this.translate.getBrowserLang();
+		const currentLang = lang !== undefined ? LANGS[lang] : this.translate.getBrowserLang();
 		this.translate.setDefaultLang(currentLang);
 	}
 }

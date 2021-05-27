@@ -1,0 +1,10 @@
+<ul [ngClass]="isMenuOpen ? 'side-menu-nav' : ''">
+	<li
+		*ngFor="let menuItem of routing.menuItems"
+		class="uppercase cursor-pointer"
+		(click)="changeMenuState(menuItem.path)"
+		[ngClass]="menuItem.active ? 'active' : ''"
+	>
+		{{ menuItem.traductionKey | translate }}
+	</li>
+</ul>
