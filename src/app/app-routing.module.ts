@@ -17,26 +17,32 @@ const routes: Routes = [
 	{
 		path: 'home',
 		component: HomeComponent,
+		data: { routingState: 'home' },
 	},
 	{
 		path: 'technologies',
 		component: TechnologiesComponent,
+		data: { routingState: 'technologies' },
 	},
 	{
 		path: 'cursus',
 		component: CursusComponent,
+		data: { routingState: 'cursus' },
 	},
 	{
 		path: 'projects',
 		component: ProjectsComponent,
+		data: { routingState: 'projects' },
 	},
 	{
 		path: 'live',
 		component: LiveComponent,
+		data: { routingState: 'live' },
 	},
 	{
 		path: 'contact',
 		component: ContactComponent,
+		data: { routingState: 'contact' },
 	},
 	{
 		path: '**',

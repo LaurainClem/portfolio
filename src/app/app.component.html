@@ -17,8 +17,11 @@
 				<app-menu></app-menu>
 			</nav>
 		</aside>
-		<div class="px-4 flex items-center justify-center h-full">
-			<router-outlet></router-outlet>
+		<div
+			[@routerTransition]="getState(outlet)"
+			class="px-4 flex items-center justify-center h-full"
+		>
+			<router-outlet #outlet="outlet"></router-outlet>
 		</div>
 	</main>
 	<footer></footer>

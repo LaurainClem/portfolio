@@ -34,16 +34,27 @@
 	grid-template-columns: 1fr 80%;
 }
 
-.avatar-msg {
-	position: absolute;
-	height: 84px;
-	left: -90px;
-	bottom: 0px;
+@media screen and (min-width: 1280px) {
+	.avatar-msg {
+		height: 84px;
+	}
 }
 
-.avatar-container {
-	height: 0px;
+@media screen and (max-width: 1280px) {
+	.avatar-msg {
+		height: 60px;
+	}
+}
+
+.avatar-msg {
+	left: -90px;
+}
+
+#avatarContainer {
+	height: 0;
+	display: flex;
+	overflow: hidden;
+	align-items: flex-end;
 	transition-property: height;
 	transition-duration: 1s;
-	transition-timing-function: ease;
 }

@@ -18,6 +18,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { LiveComponent } from './live/live.component';
 import { ContactComponent } from './contact/contact.component';
 import { LottieModule } from 'ngx-lottie';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http);
@@ -70,6 +71,7 @@ export function playerFactory() {
 	],
 	imports: [
 		BrowserModule,
+		BrowserAnimationsModule,
 		AppRoutingModule,
 		HttpClientModule,
 		TranslateModule.forRoot({
