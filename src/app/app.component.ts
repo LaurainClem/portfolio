@@ -1,6 +1,9 @@
 import { trigger, transition, query, style, animate, group } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LangsService } from './services/langs.service';
+import { first, take } from 'rxjs/operators';
+import { RoutingService } from './services/routing.service';
 
 @Component({
 	selector: 'app-root',
@@ -27,10 +30,17 @@ import { LangsService } from './services/langs.service';
 export class AppComponent implements OnInit {
 	public isMenuOpen = false;
 
-	constructor(private readonly langs: LangsService) {}
+	constructor(
+		private readonly langs: LangsService,
+		private readonly router: Router,
+		private readonly routing: RoutingService,
+	) {}
 
 	ngOnInit(): void {
 		this.langs.changeCurrentLanguage();
+		this.router.events.pipe(take(1)).subscribe((event) => {
+			this.routing.redirectTo((event as any).url);
+		});
 	}
 
 	getState(outlet: any) {

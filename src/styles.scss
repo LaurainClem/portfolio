@@ -40,6 +40,12 @@ app-contact {
 	width: 100%;
 }
 
+app-technologies {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 app-home {
 	.message {
 		padding: 0.6rem 2rem;

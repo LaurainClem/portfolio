@@ -32,15 +32,12 @@ export class HomeComponent implements OnInit {
 
 			setTimeout(() => {
 				if (document.getElementById('avatarContainer')) {
-					console.log(document.getElementById('messages')?.offsetHeight);
 					//@ts-ignore
 					document.getElementById('avatarContainer')?.style.height = `${
 						document.getElementById('messages')?.offsetHeight
 					}px`;
 				}
 			}, 1000);
-
-			console.log(message);
 		});
 		this.chat.launchMessagesReception();
 	}
