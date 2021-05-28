@@ -16,6 +16,7 @@ export class ChatService {
 		this.messagesSubject.next(this.messages[0]);
 		setTimeout(() => {
 			this.messagesSubject.next(this.messages[1]);
+			this.messagesSubject.complete();
 		}, 2000);
 	}
 }

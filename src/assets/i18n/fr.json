@@ -18,5 +18,5 @@
 	"happyToSeeYou": "Content de vous voir ici",
 	"myLinks": "Mes liens",
 	"message1": "<h2 class='inline-block mx-2 hello-anim'>\uD83D\uDC4B</h2>\r\n\t<h2 class='inline-block'>Hello world !</h2>\r\n\t<p>Content de vous voir ici !</p>",
-	"message2": "<p> Mes liens <span class='point-anim inline-block'>\uD83D\uDC47\uD83D\uDC47</span></p>\r\n\t\t<p class='text-center mt-2'>\r\n\t\t\t<a href=''><i class='fab fa-github'></i></a>\r\n\t\t\t<a href=''><i class='fab fa-linkedin'></i></a>\r\n\t\t\t<a href=''><i class='fab fa-twitch'></i></a>\r\n\t\t</p>"
+	"message2": "<p> Mes liens  <span class='point-anim inline-block'>\uD83D\uDC47\uD83D\uDC47</span></p>\r\n\t\t<p class='text-center mt-2'>\r\n\t\t\t<a href='https://github.com/LaurainClem?tab=repositories' target='_blank'><i class='fab fa-github'></i></a>\r\n\t\t\t<a href='https://fr.linkedin.com/in/cl%C3%A9ment-laurain-2b1b97182' target='_blank'><i class='fab fa-linkedin'></i></a>\r\n\t\t\t<a href='https://twitch.com/clemcode' target='_blank'><i class='fab fa-twitch'></i></a>\r\n\t\t</p>"
 }

@@ -1,6 +1,5 @@
 import { AnimationOptions } from 'ngx-lottie';
-import { AnimationItem } from 'lottie-web';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ChatService } from '../services/chat.service';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -16,12 +15,16 @@ export class HomeComponent implements OnInit {
 
 	public messages = new Array<string>();
 
-	constructor(private readonly chat: ChatService, private readonly domSanitizer: DomSanitizer) {}
+	constructor(public readonly chat: ChatService, private readonly domSanitizer: DomSanitizer) {}
 
 	ngOnInit(): void {
 		this.chat.messagesSubject.subscribe((message) => {
 			this.messages.push(message);
 		});
 		this.chat.launchMessagesReception();
+	}
+
+	getMessagesContainerHeight() {
+		return document.getElementById('messages-container')?.offsetHeight;
 	}
 }
