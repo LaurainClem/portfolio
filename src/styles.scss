@@ -26,6 +26,10 @@ body {
 	min-height: 100vh;
 }
 
+.secondary {
+	color: $secondary;
+}
+
 img {
 	pointer-events: none;
 }

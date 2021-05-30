@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { ProjectModel, TechnologiesModel } from '../models/project.model';
+import { ProjectModel } from '../models/project.model';
 import { TechnologiesService } from './technologies.service';
 
 @Injectable({
@@ -31,7 +30,8 @@ export class ProjectsService {
 			return this.projectsList.filter(
 				(project) =>
 					project.technologies.findIndex(
-						(technology) => technology.label === this.technolgies.technologySelected?.label,
+						(technology) =>
+							technology.label === this.technolgies.technologySelected?.label,
 					) !== -1,
 			);
 		}

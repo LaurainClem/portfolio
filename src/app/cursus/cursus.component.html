@@ -1,1 +1,5 @@
-<p>cursus works!</p>
+<div class="flex items-center justify-center h-full">
+	<div class="w-3/5">
+		<app-cursus-step *ngFor="let step of cursus.cursusSteps" [data]="step"></app-cursus-step>
+	</div>
+</div>

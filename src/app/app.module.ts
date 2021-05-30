@@ -12,13 +12,13 @@ import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown';
 import { TopbarComponent } from './topbar/topbar.component';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
-import { TechnologiesComponent } from './technologies/technologies.component';
 import { CursusComponent } from './cursus/cursus.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { LiveComponent } from './live/live.component';
 import { ContactComponent } from './contact/contact.component';
 import { LottieModule } from 'ngx-lottie';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CursusStepComponent } from './cursus-step/cursus-step.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http);
@@ -63,11 +63,11 @@ export function playerFactory() {
 		TopbarComponent,
 		MenuComponent,
 		HomeComponent,
-		TechnologiesComponent,
 		CursusComponent,
 		ProjectsComponent,
 		LiveComponent,
 		ContactComponent,
+  CursusStepComponent,
 	],
 	imports: [
 		BrowserModule,

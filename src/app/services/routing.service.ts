@@ -12,10 +12,6 @@ export class RoutingService {
 			path: '/home',
 		},
 		{
-			traductionKey: 'technologies',
-			path: '/technologies',
-		},
-		{
 			traductionKey: 'cursus',
 			path: '/cursus',
 		},
@@ -41,6 +37,7 @@ export class RoutingService {
 		this.menuItems.forEach((menuItem) => {
 			menuItem.active = false;
 		});
+		if (path === '/') path = '/home';
 		const idMenuItemActive = this.menuItems.findIndex((menuItem) => menuItem.path === path);
 		if (idMenuItemActive !== -1) {
 			this.menuItems[idMenuItemActive].active = true;
