@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
 
 	constructor(public readonly chat: ChatService) {}
 	public height = 0;
+
 	ngOnInit(): void {
 		this.chat.messagesSubject.subscribe((message) => {
 			this.messages.push(message);

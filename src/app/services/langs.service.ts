@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Subject } from 'rxjs';
 import { LANGS } from 'src/static/langs.enum';
 
 @Injectable({
@@ -10,6 +11,10 @@ export class LangsService {
 
 	changeCurrentLanguage(lang?: LANGS): void {
 		const currentLang = lang !== undefined ? LANGS[lang] : this.translate.getBrowserLang();
-		this.translate.setDefaultLang(currentLang);
+		this.translate.use(currentLang);
+	}
+
+	getCurrentLanguage(): string {
+		return this.translate.currentLang;
 	}
 }

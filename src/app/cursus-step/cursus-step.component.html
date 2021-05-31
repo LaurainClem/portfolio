@@ -2,10 +2,12 @@
 	<div class="flex flex-col items-center">
 		<div class="top-line"></div>
 		<img *ngIf="data?.completed" class="step-img" src="../../assets/img/checked.svg" />
-		<div *ngIf="!data?.completed" class="not-completed">. . .</div>
+		<div *ngIf="!data?.completed" class="not-completed flex justify-center items-center">
+			<i class="fas fa-ellipsis-h"></i>
+		</div>
 		<div class="bottom-line"></div>
 	</div>
-	<div class="flex flex-col">
+	<div class="flex flex-col justify-center">
 		<h2 class="uppercase font-bold">{{ data?.title }}</h2>
 		<p class="secondary text-sm">{{ data?.date }}</p>
 		<p class="secondary text-sm">{{ data?.description }}</p>

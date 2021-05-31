@@ -10,6 +10,9 @@
 	width: 10px;
 	background: $primary;
 	margin-bottom: 10px;
+
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 .bottom-line {
@@ -17,6 +20,8 @@
 	width: 10px;
 	background: $primary;
 	margin-top: 10px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 
 .cursus-step-container {

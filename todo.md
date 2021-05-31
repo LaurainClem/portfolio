@@ -1,1 +1,2 @@
--   last messages home page (project number, ...)
+- last messages home page (project number, ...)
+- bug sur cetaines tailles d'ecran timeline

@@ -1,5 +1,13 @@
 <div class="flex items-center justify-center h-full">
-	<div class="w-3/5">
-		<app-cursus-step *ngFor="let step of cursus.cursusSteps" [data]="step"></app-cursus-step>
+	<div class="xl:w-3/5 xl:h-3/5 sm:w-full sm:h-full my-auto cursus-container">
+		<app-cursus-step
+			[ngClass]="[
+				indexStep === 0 ? 'start-line' : '',
+				indexStep + 1 === cursus.cursusSteps.length ? 'end-line' : ''
+			]"
+			*ngFor="let step of cursus.cursusSteps; let indexStep = index"
+			[data]="step"
+		>
+		</app-cursus-step>
 	</div>
 </div>

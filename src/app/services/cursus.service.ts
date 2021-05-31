@@ -2,20 +2,37 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CursusStep } from '../models/cursusStep.model';
 import { environment } from '../../environments/environment';
+import { interval, Subject } from 'rxjs';
+import { take } from 'rxjs/operators';
+import { LangsService } from './langs.service';
 
 @Injectable({
 	providedIn: 'root',
 })
 export class CursusService {
-	cursusSteps = new Array<CursusStep>();
+	public cursusSteps = new Array<CursusStep>();
+	public cursusSubject = new Subject<CursusStep>();
 
-	constructor(private readonly http: HttpClient) {}
+	constructor(private readonly http: HttpClient, private readonly langs: LangsService) {}
 
 	fetchAllCursusSteps(): void {
 		this.http
-			.get<CursusStep[]>(`${environment.baseUrl}/cursuses`)
+			.get<CursusStep[]>(
+				`${environment.baseUrl}/cursuses?_locale=${this.langs.getCurrentLanguage()}`,
+			)
 			.subscribe((result: CursusStep[]) => {
 				this.cursusSteps = result.reverse();
+				console.log(this.cursusSteps);
+				/* 				this.getCursusStep();
+				 */
 			});
 	}
+
+	/* getCursusStep(): void {
+		interval(200)
+			.pipe(take(this.cursusSteps.length))
+			.subscribe((i) => {
+				this.cursusSubject.next(this.cursusSteps[i]);
+			});
+	} */
 }
