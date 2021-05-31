@@ -68,8 +68,8 @@ export function playerFactory() {
 		ProjectsComponent,
 		LiveComponent,
 		ContactComponent,
-  CursusStepComponent,
-  ProjectComponent,
+		CursusStepComponent,
+		ProjectComponent,
 	],
 	imports: [
 		BrowserModule,

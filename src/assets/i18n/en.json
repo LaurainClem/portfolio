@@ -3,7 +3,7 @@
 	"heroDesc": "Full stack typescript developper",
 	"aboutTitle": "About",
 	"projectsTitle": "Projects",
-	"done": " ✅ Realised",
+	"done": "Realised",
 	"inProgress": " ☕ In progress",
 	"design": " 🎨 Maquettage",
 	"all": "All",
@@ -17,7 +17,7 @@
 	"contact": "Contact",
 	"happyToSeeYou": "I'm happy to see you here",
 	"myLinks": "My links",
-	"message1": "<h2 class='inline-block mx-2 hello-anim'>\uD83D\uDC4B</h2>\r\n\t<h2 class='inline-block'>Hello world !</h2>\r\n\t<p>Happy to see you here !</p>",
-	"message2": "<p> My links  <span class='point-anim inline-block'>\uD83D\uDC47\uD83D\uDC47</span></p>\r\n\t\t<p class='text-center mt-2'>\r\n\t\t\t<a href='https://github.com/LaurainClem?tab=repositories' target='_blank'><i class='fab fa-github'></i></a>\r\n\t\t\t<a href='https://fr.linkedin.com/in/cl%C3%A9ment-laurain-2b1b97182' target='_blank'><i class='fab fa-linkedin'></i></a>\r\n\t\t\t<a href='https://twitch.com/clemcode' target='_blank'><i class='fab fa-twitch'></i></a>\r\n\t\t</p>",
+	"message1": "<h2 class='inline-block mx-2 hello-anim'>👋</h2>\r\n\t<h2 class='inline-block'>Hello world !</h2>\r\n\t<p>Happy to see you here !</p>",
+	"message2": "<p> My links  <span class='point-anim inline-block'>👇👇</span></p>\r\n\t\t<p class='text-center mt-2'>\r\n\t\t\t<a href='https://github.com/LaurainClem?tab=repositories' target='_blank'><i class='fab fa-github'></i></a>\r\n\t\t\t<a href='https://fr.linkedin.com/in/cl%C3%A9ment-laurain-2b1b97182' target='_blank'><i class='fab fa-linkedin'></i></a>\r\n\t\t\t<a href='https://twitch.com/clemcode' target='_blank'><i class='fab fa-twitch'></i></a>\r\n\t\t</p>",
 	"message3": "pwet"
 }

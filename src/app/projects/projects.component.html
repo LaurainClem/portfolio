@@ -1,7 +1,8 @@
-<div class="h-full w-full">
-	<app-project
+<div class="h-full w-full px-4">
+	<!-- <app-project
 		*ngFor="let project of projects.getProjectListsFiltered()"
-		class="h-full w-full"
+		class="h-full w-3/4"
 		[data]="project"
-	></app-project>
+	></app-project> -->
+	<app-project class="w-4/5" [data]="projects.getProjectListsFiltered()[0]"></app-project>
 </div>

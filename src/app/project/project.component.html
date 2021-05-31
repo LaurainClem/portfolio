@@ -1,3 +1,33 @@
 <div class="h-full w-full grid grid-cols-2">
-	<img [src]="environment.baseUrl + data?.image?.url" />
+	<img class="h-3/5 m-auto" [src]="environment.baseUrl + data?.image?.url" />
+	<div class="container h-3/4 my-auto">
+		<div class="header flex justify-between">
+			<div class="flex items-center">
+				<h2 class="uppercase text-2xl font-bold inline-block mr-8">{{ data?.title }}</h2>
+				<span
+					class="status-tag inline-block"
+					[ngClass]="[
+						data?.status === 'done'
+							? 'status-done'
+							: data?.status === 'design'
+							? 'status-design'
+							: data?.status === 'inProgress'
+							? 'status-progress'
+							: ''
+					]"
+					>{{ data?.status || '' | translate }}</span
+				>
+			</div>
+			<div class="flex justify-end">
+				<img
+					class="techno-img mx-2"
+					*ngFor="let techno of data?.technologies"
+					[src]="environment.baseUrl + techno.image.url"
+				/>
+			</div>
+		</div>
+		<div class="description-project">
+			<markdown [data]="data?.description"></markdown>
+		</div>
+	</div>
 </div>

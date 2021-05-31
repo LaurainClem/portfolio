@@ -124,6 +124,20 @@ app-cursus {
 	border-top-right-radius: 5px;
 }
 
+.subtitle {
+	font-size: 800;
+}
+
+.subtitle,
+.listItemProject,
+.textProject {
+	color: $secondary;
+}
+
+.subtitleBlock {
+	margin-top: 1rem;
+}
+
 @keyframes hello-anim {
 	0% {
 		transform: rotateZ(0deg);
