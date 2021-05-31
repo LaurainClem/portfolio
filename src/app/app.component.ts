@@ -39,7 +39,6 @@ export class AppComponent implements OnInit {
 	ngOnInit(): void {
 		this.langs.changeCurrentLanguage();
 		this.router.events.pipe(take(1)).subscribe((event) => {
-			console.log((event as any).url);
 			this.routing.redirectTo((event as any).url);
 		});
 	}

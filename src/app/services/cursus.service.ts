@@ -22,17 +22,6 @@ export class CursusService {
 			)
 			.subscribe((result: CursusStep[]) => {
 				this.cursusSteps = result.reverse();
-				console.log(this.cursusSteps);
-				/* 				this.getCursusStep();
-				 */
 			});
 	}
-
-	/* getCursusStep(): void {
-		interval(200)
-			.pipe(take(this.cursusSteps.length))
-			.subscribe((i) => {
-				this.cursusSubject.next(this.cursusSteps[i]);
-			});
-	} */
 }

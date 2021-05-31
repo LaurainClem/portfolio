@@ -20,6 +20,7 @@ export class ProjectsService {
 			.get<ProjectModel[]>(`${environment.baseUrl}/projects?_locale=${local}`)
 			.subscribe((result) => {
 				this.projectsList = result;
+				console.log(this.projectsList);
 			});
 	}
 
