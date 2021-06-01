@@ -9,6 +9,7 @@ footer {
 	main {
 		display: grid;
 		grid-template-columns: 15vw 1fr;
+		height: 80vh;
 	}
 }
 
@@ -19,10 +20,6 @@ footer {
 	aside {
 		display: none;
 	}
-}
-
-main {
-	height: 80vh;
 }
 
 nav {
@@ -53,4 +50,70 @@ nav {
 
 .grayscale {
 	transition: filter 1s ease;
+}
+
+.copyright {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	font-size: 16px;
+	color: $secondary;
+}
+
+.aniWrap {
+	margin: auto;
+	display: block;
+	width: 28px;
+}
+
+.project-nav {
+	// animation: scroll-indicator-anim 2s ease infinite;
+}
+
+.mouse {
+	width: 28px;
+	height: 50px;
+	border: 2px solid white;
+	border-radius: 14px;
+}
+
+.scroller {
+	width: 4px;
+	height: 4px;
+	border-radius: 2px;
+	background: white;
+	position: relative;
+	top: 10px;
+	left: 12px;
+	animation: scrolls 1.3s ease-out infinite reverse;
+}
+
+@keyframes scrolls {
+	0% {
+		top: 18px;
+		opacity: 1;
+		height: 4px;
+	}
+	95% {
+		top: 5px;
+		opacity: 0;
+		height: 8px;
+	}
+	100% {
+		top: 18px;
+		opacity: 1;
+		height: 4px;
+	}
+}
+
+@keyframes scroll-indicator-anim {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
 }

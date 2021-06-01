@@ -18,13 +18,16 @@ export class ProjectsComponent implements OnInit {
 		this.translate.onLangChange.subscribe(() => {
 			this.projects.fetchAllProjects();
 		});
-		window.addEventListener('wheel', (e: any) => {
-			console.log(e);
-			if (e.deltaY > 0) {
-				this.projects.getNextProject();
-			} else {
-				this.projects.getPrevProject();
-			}
-		});
+
+		//@ts-ignore
+		if (!navigator.userAgentData?.mobile) {
+			window.addEventListener('wheel', (e: any) => {
+				if (e.deltaY > 0) {
+					this.projects.getNextProject();
+				} else {
+					this.projects.getPrevProject();
+				}
+			});
+		}
 	}
 }

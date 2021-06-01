@@ -7,11 +7,11 @@
 	</div>
 </div>
 
-<div class="px-4" [ngClass]="isMenuOpen ? 'filter grayscale' : ''">
+<div class="px-4 h-screen flex flex-col" [ngClass]="isMenuOpen ? 'filter grayscale' : ''">
 	<header class="pt-6">
 		<app-topbar [(isMenuOpen)]="isMenuOpen"></app-topbar>
 	</header>
-	<main>
+	<main class="flex-grow">
 		<aside>
 			<nav class="flex items-center" s>
 				<app-menu></app-menu>
@@ -24,5 +24,36 @@
 			<router-outlet #outlet="outlet"></router-outlet>
 		</div>
 	</main>
-	<footer></footer>
+	<footer class="flex relative" [ngClass]="isMobile ? 'justify-start' : 'justify-center'">
+		<div class="project-nav" *ngIf="isProjectNavShowed">
+			<div class="project-nav-large" *ngIf="!isMobile">
+				<div class="aniWrap inline-block">
+					<div class="mouse">
+						<div class="scroller"></div>
+					</div>
+				</div>
+				<p class="inline-block">{{ 'scrollToDiscoverProjects' | translate }}</p>
+			</div>
+			<div class="project-nav-small flex mt-8" *ngIf="isMobile">
+				<div
+					class="prev inline-block flex flex-col items-center mx-4"
+					(click)="projects.getPrevProject()"
+				>
+					<i class="fas fa-chevron-left"></i>
+					{{ 'prev' | translate }}
+				</div>
+
+				<div
+					class="next inline-block flex flex-col items-center mx-4"
+					(click)="projects.getNextProject()"
+				>
+					<i class="fas fa-chevron-right"></i>
+					{{ 'next' | translate }}
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			laurainclem.com © {{ 'rightsReserved' | translate }} - {{ getActualYear() }}
+		</div>
+	</footer>
 </div>

@@ -20,5 +20,8 @@
 	"message1": "<h2 class='inline-block mx-2 hello-anim'>👋</h2>\r\n\t<h2 class='inline-block'>Hello world !</h2>\r\n\t<p>Content de vous voir ici !</p>",
 	"message2": "<p> Mes liens  <span class='point-anim inline-block'>👇👇</span></p>\r\n\t\t<p class='text-center mt-2'>\r\n\t\t\t<a href='https://github.com/LaurainClem?tab=repositories' target='_blank'><i class='fab fa-github'></i></a>\r\n\t\t\t<a href='https://fr.linkedin.com/in/cl%C3%A9ment-laurain-2b1b97182' target='_blank'><i class='fab fa-linkedin'></i></a>\r\n\t\t\t<a href='https://twitch.com/clemcode' target='_blank'><i class='fab fa-twitch'></i></a>\r\n\t\t</p>",
 	"message3": "pwet",
-	"scrollToDiscoverProjects": "Défilez vers le bas"
+	"scrollToDiscoverProjects": "Défilez doucement",
+	"prev": "Précédent",
+	"next": "Suivant",
+	"rightsReserved": "Tous droits réservés"
 }
