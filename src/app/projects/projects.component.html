@@ -1,8 +1,4 @@
-<div class="h-full w-full px-4">
-	<!-- <app-project
-		*ngFor="let project of projects.getProjectListsFiltered()"
-		class="h-full w-3/4"
-		[data]="project"
-	></app-project> -->
-	<app-project class="w-4/5" [data]="projects.getProjectListsFiltered()[0]"></app-project>
-</div>
+<app-project
+	class="h-full w-full"
+	[data]="projects.getProject(projects.currentCursor)"
+></app-project>

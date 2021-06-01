@@ -7,4 +7,26 @@
 .techno-img {
 	height: 50px;
 	width: 50px;
+	animation: techno-img-anim 1s ease;
+}
+
+.project-img {
+	transform: scale(1);
+	transition-property: transform;
+	transition-duration: 1s;
+	transition-timing-function: ease;
+	pointer-events: auto;
+}
+
+.project-img:hover {
+	transform: scale(1.1);
+}
+
+@keyframes techno-img-anim {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
 }

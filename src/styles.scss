@@ -19,8 +19,25 @@
 	* {
 		font-size: 24px;
 	}
+
+	.header-project {
+		justify-content: space-between;
+	}
+
+	.project-img {
+		max-height: 100%;
+	}
 }
 
+@media screen and (max-width: 1280px) {
+	.header-project {
+		flex-direction: column;
+	}
+
+	.project-img {
+		max-height: 350px;
+	}
+}
 body {
 	background-color: $background;
 	min-height: 100vh;
@@ -39,7 +56,8 @@ app-technologies,
 app-cursus,
 app-projects,
 app-live,
-app-contact {
+app-contact,
+app-project {
 	height: 100%;
 	width: 100%;
 }
@@ -132,6 +150,7 @@ app-cursus {
 .listItemProject,
 .textProject {
 	color: $secondary;
+	font-size: 16px;
 }
 
 .subtitleBlock {
