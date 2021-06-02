@@ -1,3 +1,13 @@
+<h2 class="text-right">
+	{{
+		projects.currentCursor +
+			1 +
+			'/' +
+			projects.getProjectsListLength() +
+			' ' +
+			('projects' | translate)
+	}}
+</h2>
 <app-project
 	class="h-full w-full"
 	[data]="projects.getProject(projects.currentCursor)"

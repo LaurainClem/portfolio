@@ -57,4 +57,8 @@ export class ProjectsService {
 	getPrevProject(): void {
 		if (this.currentCursor > 0) this.currentCursor--;
 	}
+
+	getProjectsListLength(): number {
+		return this.projectsList.length;
+	}
 }

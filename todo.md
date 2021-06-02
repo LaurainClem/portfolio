@@ -1,2 +1,3 @@
-- last messages home page (project number, ...)
-- bug sur cetaines tailles d'ecran timeline
+-   last messages home page (project number, ...)
+-   bug sur cetaines tailles d'ecran timeline
+-   logo et icone
