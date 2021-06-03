@@ -6,6 +6,16 @@
 		/>
 	</div>
 	<div class="container my-auto">
+		<!-- <h2 class="mt-8 xl:mt-0 mb-4 xl:mb-0 text-right">
+			{{
+				projects.currentCursor +
+					1 +
+					'/' +
+					projects.getProjectsListLength() +
+					' ' +
+					('projects' | translate)
+			}}
+		</h2> -->
 		<div class="header-project flex my-2">
 			<div class="flex items-center justify-center">
 				<h2 class="uppercase text-2xl font-bold inline-block mr-8">{{ data?.title }}</h2>
@@ -25,7 +35,7 @@
 			</div>
 			<div class="flex justify-center">
 				<img
-					class="techno-img mx-2"
+					class="techno-img m-2"
 					*ngFor="let techno of data?.technologies"
 					[src]="environment.baseUrl + techno.image.url"
 				/>

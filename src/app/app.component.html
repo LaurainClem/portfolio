@@ -24,7 +24,10 @@
 			<router-outlet #outlet="outlet"></router-outlet>
 		</div>
 	</main>
-	<footer class="flex relative" [ngClass]="isMobile ? 'justify-start' : 'justify-center'">
+	<footer
+		class="flex relative flex-col xl:flex-row"
+		[ngClass]="isMobile ? 'justify-start' : 'justify-center'"
+	>
 		<div class="project-nav" *ngIf="isProjectNavShowed">
 			<div class="project-nav-large" *ngIf="!isMobile">
 				<div class="aniWrap inline-block">
@@ -34,7 +37,10 @@
 				</div>
 				<p class="inline-block">{{ 'scrollToDiscoverProjects' | translate }}</p>
 			</div>
-			<div class="project-nav-small flex mt-8" *ngIf="isMobile">
+			<div
+				class="project-nav-small xl:justify-start justify-center flex mt-8 mb-8 xl:mb-0"
+				*ngIf="isMobile"
+			>
 				<div
 					class="prev inline-block flex flex-col items-center mx-4"
 					(click)="projects.getPrevProject()"
@@ -52,7 +58,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="copyright">
+		<div class="copyright xl:absolute relative text-center">
 			laurainclem.com © {{ 'rightsReserved' | translate }} - {{ getActualYear() }}
 		</div>
 	</footer>

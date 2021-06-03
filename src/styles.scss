@@ -27,6 +27,10 @@
 	.project-img {
 		max-height: 100%;
 	}
+
+	app-projects {
+		margin-top: 0rem;
+	}
 }
 
 @media screen and (max-width: 1280px) {
@@ -36,6 +40,10 @@
 
 	.project-img {
 		max-height: 350px;
+	}
+
+	app-projects {
+		margin-top: 2rem;
 	}
 }
 body {
