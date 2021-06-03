@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CursusStepComponent } from './cursus-step/cursus-step.component';
 import { ProjectComponent } from './project/project.component';
 import { ToastrModule } from 'ngx-toastr';
+import { ReactiveFormsModule } from '@angular/forms';
 
 export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http);
@@ -76,6 +77,7 @@ export function playerFactory() {
 		BrowserModule,
 		BrowserAnimationsModule,
 		AppRoutingModule,
+		ReactiveFormsModule,
 		HttpClientModule,
 		TranslateModule.forRoot({
 			loader: {

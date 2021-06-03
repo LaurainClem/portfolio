@@ -28,5 +28,9 @@
 	"firstName": "Prénom",
 	"email": "Adresse email",
 	"message": "Votre message ...",
-	"send": "Envoyer"
+	"send": "Envoyer",
+	"messageSend": "Je reviendrai vers vous dès que possible",
+	"thanksFeedback": "Merci de votre retour",
+	"invalidFormMessage": "Tout les champs doivent être saisis et le champ email doit contenir un '@'",
+	"errorOccured": "Oops! Une erreur est survenue, veuillez réesayer plus tard"
 }

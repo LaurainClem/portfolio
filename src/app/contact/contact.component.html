@@ -1,28 +1,39 @@
 <div class="xl:grid xl:grid-cols-2 h-full flex items-center">
 	<div class="form flex justify-center items-center">
-		<form name="contact" netlify class="flex flex-col items-center">
+		<form
+			[formGroup]="contactForm"
+			name="contact"
+			netlify
+			netlify-honeypot="bot-field"
+			hidden
+			class="flex flex-col items-center"
+		>
 			<input
 				type="text"
-				pattern="[a-zA-Z]+"
 				required
 				name=""
 				id="name"
 				[placeholder]="'name' | translate"
+				formControlName="name"
 			/>
 			<input
 				type="text"
-				required
-				pattern="[a-zA-Z]+"
 				name=""
 				id="firstName"
 				[placeholder]="'firstName' | translate"
+				formControlName="firstName"
 			/>
-			<input type="email" required name="" id="email" [placeholder]="'email' | translate" />
+			<input
+				type="email"
+				formControlName="email"
+				name=""
+				id="email"
+				[placeholder]="'email' | translate"
+			/>
 			<textarea
 				name="message"
+				formControlName="message"
 				id=""
-				required
-				pattern="[a-zA-Z]+"
 				cols="30"
 				rows="6"
 				[placeholder]="'message' | translate"

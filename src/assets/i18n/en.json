@@ -28,5 +28,9 @@
 	"firstName": "First Name",
 	"email": "Email adress",
 	"message": "Your message ...",
-	"send": "Send"
+	"send": "Send",
+	"messageSend": "I'll get back to you soon",
+	"thanksFeedback": "Thanks for your feedback",
+	"invalidFormMessage": "All fields have to be filled and email must contain '@'",
+	"errorOccured": "Oops! An error occured, try later"
 }

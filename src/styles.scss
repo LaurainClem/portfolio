@@ -161,6 +161,18 @@ app-cursus {
 	margin-top: 1rem;
 }
 
+.toast-message {
+	font-size: 16px;
+}
+
+.toast-title {
+	font-size: 20px;
+}
+
+.ngx-toastr {
+	width: auto !important;
+}
+
 @keyframes hello-anim {
 	0% {
 		transform: rotateZ(0deg);
