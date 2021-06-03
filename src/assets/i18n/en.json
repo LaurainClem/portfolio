@@ -23,5 +23,10 @@
 	"scrollToDiscoverProjects": "Scroll slowly",
 	"prev": "Prev",
 	"next": "Next",
-	"rightsReserved": "All rights reserved"
+	"rightsReserved": "All rights reserved",
+	"name": "Name",
+	"firstName": "First Name",
+	"email": "Email adress",
+	"message": "Your message ...",
+	"send": "Send"
 }

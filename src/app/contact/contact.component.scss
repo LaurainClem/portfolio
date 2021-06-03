@@ -1,0 +1,43 @@
+@import '../../variables.scss';
+
+input,
+textarea {
+	margin: 1rem 0;
+	border-radius: 5px;
+	border: $secondary 3px solid;
+	background-color: $background;
+	color: $primary;
+	padding-left: 1rem;
+	width: 100%;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+	outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: $secondary;
+}
+
+.btnSubmit {
+	width: fit-content;
+	padding: 0.5rem 1rem;
+	text-transform: uppercase;
+	font-weight: 800;
+	i {
+		margin-right: 0.5rem;
+	}
+	background-color: $accent;
+	border-radius: 5px;
+}
+
+.btnSubmit:focus-visible,
+.btnSubmit:focus {
+	outline: 0;
+}
+
+.btnSubmit:hover {
+	background-color: rgb($accent, 0.8);
+}

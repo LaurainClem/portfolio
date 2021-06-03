@@ -1,1 +1,38 @@
-<p>contact works!</p>
+<div class="grid grid-cols-2 h-full">
+	<div class="form flex justify-center items-center">
+		<form name="contact" netlify class="flex flex-col items-center">
+			<input
+				type="text"
+				pattern="[a-zA-Z]+"
+				required
+				name=""
+				id="name"
+				[placeholder]="'name' | translate"
+			/>
+			<input
+				type="text"
+				required
+				pattern="[a-zA-Z]+"
+				name=""
+				id="firstName"
+				[placeholder]="'firstName' | translate"
+			/>
+			<input type="email" required name="" id="email" [placeholder]="'email' | translate" />
+			<textarea
+				name="message"
+				id=""
+				required
+				pattern="[a-zA-Z]+"
+				cols="30"
+				rows="6"
+				[placeholder]="'message' | translate"
+			></textarea>
+			<button class="cursor-pointer btnSubmit" type="submit">
+				<i class="fas fa-paper-plane"></i> {{ 'send' | translate }}
+			</button>
+		</form>
+	</div>
+	<div class="illustration flex justify-center items-center">
+		<img src="../../assets/img/contact.svg" />
+	</div>
+</div>
