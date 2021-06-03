@@ -11,4 +11,5 @@
 <app-project
 	class="h-full w-full"
 	[data]="projects.getProject(projects.currentCursor)"
+	(wheel)="wheelEventListener($event)"
 ></app-project>

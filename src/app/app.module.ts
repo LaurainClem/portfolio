@@ -20,6 +20,7 @@ import { LottieModule } from 'ngx-lottie';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CursusStepComponent } from './cursus-step/cursus-step.component';
 import { ProjectComponent } from './project/project.component';
+import { ToastrModule } from 'ngx-toastr';
 
 export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http);
@@ -91,6 +92,7 @@ export function playerFactory() {
 			},
 		}),
 		LottieModule.forRoot({ player: playerFactory }),
+		ToastrModule.forRoot(),
 	],
 	providers: [{ provide: HTTP_INTERCEPTORS, useClass: GraphqlInterceptor, multi: true }],
 	bootstrap: [AppComponent],

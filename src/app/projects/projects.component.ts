@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { ProjectsService } from '../services/projects.service';
 
@@ -14,20 +14,22 @@ export class ProjectsComponent implements OnInit {
 	) {}
 
 	ngOnInit(): void {
+		this.projects.currentCursor = 0;
 		this.projects.fetchAllProjects();
 		this.translate.onLangChange.subscribe(() => {
 			this.projects.fetchAllProjects();
 		});
+	}
 
+	wheelEventListener(e: any): void {
+		console.log('pwet');
 		//@ts-ignore
 		if (!navigator.userAgentData?.mobile) {
-			window.addEventListener('wheel', (e: any) => {
-				if (e.deltaY > 0) {
-					this.projects.getNextProject();
-				} else {
-					this.projects.getPrevProject();
-				}
-			});
+			if (e.deltaY > 0) {
+				this.projects.getNextProject();
+			} else {
+				this.projects.getPrevProject();
+			}
 		}
 	}
 }

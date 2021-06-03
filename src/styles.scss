@@ -51,6 +51,10 @@ img {
 	pointer-events: none;
 }
 
+app-project {
+	animation: project-anim 1s ease;
+}
+
 app-home,
 app-technologies,
 app-cursus,
@@ -224,5 +228,14 @@ app-cursus {
 	to {
 		opacity: 1;
 		transform: translateY(0px);
+	}
+}
+
+@keyframes project-anim {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }
